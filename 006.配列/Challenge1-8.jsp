@@ -9,7 +9,7 @@
 
 <%
 
- String[] data = {"10","100","soeda","hayshi","-20","118","END"};
+ String[] data = {"10","100","soeda","hayashi","-20","118","END"};
  out.println(data[0]);
  out.println(data[1]);
  out.println(data[2]);
