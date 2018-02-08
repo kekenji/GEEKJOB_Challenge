@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package Challenge;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -15,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author geust1Day
  */
-public class Challenge16 extends HttpServlet {
+public class Challenge18 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -26,21 +27,25 @@ public class Challenge16 extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    void myprofile(PrintWriter pw){
+     
+    pw.print("私の名前は林です<br>");
+    pw.print("好きな音楽はジャズ<br>");
+    pw.print("趣味はゲームと旅行です<br>");
+    pw.print("<br>");
+    
+}
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            //自分のプロフィール(名前、生年月日、自己紹介)を3行に分けて表示するユーザー定義メソッドを作り、メソッドを10回呼び出して下さい。
-            
-            String myprofile[] = {"伊藤健次","1994年11月22日","ポケモン"};
-            for (int i = 0; i < 10; i++) {
-            out.println(myprofile[0] + "<br>");
-            out.println(myprofile[1] + "<br>");
-            out.println(myprofile[2] + "<br>");
-            out.print("<br>");
+      for(int i =0;i<10;i++){
+          
+      
+           
+     myprofile(out);
         }
-}
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
